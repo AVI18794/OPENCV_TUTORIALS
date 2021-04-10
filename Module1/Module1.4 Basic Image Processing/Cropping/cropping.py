@@ -24,3 +24,4 @@ cv2.imshow("Cropped Region",cropped_region)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
+
