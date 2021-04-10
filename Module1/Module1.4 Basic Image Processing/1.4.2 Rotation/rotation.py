@@ -23,7 +23,7 @@ cv2.imshow("Original Image",image)
 (h,w) = image.shape[:2]
 (cX,cY) = (w/2,h/2)
 #Rotate the image by 45 degree
-M  = cv2.getRotationMatrix2D((cX,cY),45,1.0)
+M  = cv2.getRotationMatrix2D((cX,cY),45,2.0)
 rotated = cv2.warpAffine(image,M,(w,h))
 cv2.imshow("Rotated by 45 degree",rotated)
 

@@ -27,7 +27,7 @@ cv2.imshow("Original Image",image)
 #	[[1, 0, shiftX], [0, 1, shiftY]]
 # You simply need to specify how many pixels you want to shift the image
 # in the X and Y direction -- let's translate the image 25 pixels to the
-# right and 50 pixels down
+# right and 50 pixels downpo
 M = np.float32([[1,0,25],[0,1,50]])
 shifted = cv2.warpAffine(image,M,(image.shape[1],image.shape[0]))
 cv2.imshow("Shifted Down and Right",shifted)
