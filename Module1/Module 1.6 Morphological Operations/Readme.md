@@ -37,3 +37,14 @@ A foreground pixel in the input image will be kept only if ALL pixels inside the
 Erosion is useful for removing small blobs in an image or disconnecting two connected objects.
 
 We can perform erosion by using the cv2.erode  function.
+
+
+## Dilation
+The opposite of an erosion is a dilation. Just like an erosion will eat away at the foreground pixels, a dilation will grow the foreground pixels.
+
+Dilations increase the size of foreground object and are especially useful for joining broken parts of an image together.
+
+Dilations, just as an erosion, also utilize structuring elements — a center pixel p of the structuring element is set to white if ANY pixel in the structuring element is > 0.
+
+We apply dilations using the cv2.dilate  function:
+
