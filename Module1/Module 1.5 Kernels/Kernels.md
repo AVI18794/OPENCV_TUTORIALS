@@ -14,3 +14,18 @@ At each point (x,y)-coordinate of the image we stop and examine the neighbour of
 
 We can take this neighborhood of pixels, convolve them with the kernel, and we get a single output value. This output value is then stored in the output image at the same (x, y)-coordinate as the center of the kernel.
 
+Before moving let's first what are kernels.
+**Kernels** can be an arbitrary size of M*N pixels,provided that both M and N are odd integers. 
+Now the question comes is why do both M and N need to be odd?
+
+The reason behind having an odd number of M and N are that our kernels must be designed in such a way that the pixel values which we are trying to manipulate always lies on the center of the kernel.
+Let's say in a 3x3 kernel, the center is located at (1,1) assuming a zero indexed array.
+
+Fig:![Fig of 3x3 kernel("")
+For a 5x5 kernel, the center is located at (2,2)
+
+
+Fig:![Fig of 5x5 kernel]("")
+
+
+**Note:- Readme file on Kernels is under construction. Thank you for reading through the text.**
