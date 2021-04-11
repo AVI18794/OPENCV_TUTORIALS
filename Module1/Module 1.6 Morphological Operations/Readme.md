@@ -48,3 +48,7 @@ Dilations, just as an erosion, also utilize structuring elements — a center pi
 
 We apply dilations using the cv2.dilate  function:
 
+## Opening
+An opening is an erosion followed by a dilation.
+
+Performing an opening operation allows us to remove small blobs from an image: first an erosion is applied to remove the small blobs, then a dilation is applied to regrow the size of the original object.
