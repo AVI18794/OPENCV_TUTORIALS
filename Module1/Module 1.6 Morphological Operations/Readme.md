@@ -27,3 +27,13 @@ There are different types of morphological operations which can be perfomed on t
 * Black hat
 * Top hat (or “White hat”)
 
+## Erosion
+Just like water rushing along a river bank erodes the soil, an erosion in an image “erodes” the foreground object and makes it smaller. Simply put, pixels near the boundary of an object in an image will be discarded, “eroding” it away.
+
+Erosion works by defining a structuring element and then sliding this structuring element from left-to-right and top-to-bottom across the input image.
+
+A foreground pixel in the input image will be kept only if ALL pixels inside the structuring element are > 0. Otherwise, the pixels are set to 0 (i.e. background).
+
+Erosion is useful for removing small blobs in an image or disconnecting two connected objects.
+
+We can perform erosion by using the cv2.erode  function.
