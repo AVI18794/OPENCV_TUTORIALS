@@ -7,7 +7,7 @@ We can also use convolution to extract features from images and build very power
 #Image Kernels
 So let's assume our image is a big matirx and kernel is as a tiny matrix(at least in comparion to the images which is a bigger matrix.)
 See in the figure below</br>
-![Kernel and Image Matrix]("Images\kernel_sliding.png")
+![Kernel and Image Matrix]("https://www.pyimagesearch.com/wp-content/uploads/2016/06/convolutions_kernel_sliding.jpg")
 </br>
 As you see in the figure the kernels or filters are sliding from let to right and top to bottom along the original image.
 At each point (x,y)-coordinate of the image we stop and examine the neighbour of the image pixels located at the center of the image kernel.
