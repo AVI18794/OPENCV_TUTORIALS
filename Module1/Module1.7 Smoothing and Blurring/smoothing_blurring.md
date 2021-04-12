@@ -22,13 +22,13 @@ In order to average blur an image , we use the cv2.blur function.The function re
   Gaussian blurring is similar to average blurring, but instead of using a simple mean, we are now using a weighted mean, where neighborhood pixels that are closer to the central pixel contribute more “weight” to the average. And as the name suggests, Gaussian smoothing is used to remove noise that approximately follows a Gaussian distribution.
 The end result is that our image is less blurred, but more naturally blurred, than using the average blur method.
 
-Furthermore, based on this weighting we’ll be able to preserve more of the edges in our image as compared to average smoothing. Just like an average blurring, Gaussian smoothing also uses a kernel of M \times N, where both M and N are odd integers.
+Furthermore, based on this weighting we’ll be able to preserve more of the edges in our image as compared to average smoothing. Just like an average blurring, Gaussian smoothing also uses a kernel of M x N, where both M and N are odd integers.
 
 
 ## Median Blur
 The median blur method has been most effective when removing salt-and-pepper noise from the image.
 
-When applying a median blur, we first define our kernel size . Then, as in the averaging blurring method, we consider all pixels in the neighborhood of size K \times K where K is an odd integer. Notice how, unlike average blurring and Gaussian blurring where the kernel size could be rectangular, the kernel size for the median must be square. Furthermore (unlike the averaging method), instead of replacing the central pixel with the average of the neighborhood, we instead replace the central pixel with the median of the neighborhood.
+When applying a median blur, we first define our kernel size . Then, as in the averaging blurring method, we consider all pixels in the neighborhood of size K x K where K is an odd integer. Notice how, unlike average blurring and Gaussian blurring where the kernel size could be rectangular, the kernel size for the median must be square. Furthermore (unlike the averaging method), instead of replacing the central pixel with the average of the neighborhood, we instead replace the central pixel with the median of the neighborhood.
 
 The reason median blurring is more effective at removing salt-and-pepper style noise from an image is that each central pixel is always replaced with a pixel intensity that exists in the image. And since the median is robust to outliers, the salt-and-pepper noise will be less influential to the median than another statistical method, such as the average.
 
