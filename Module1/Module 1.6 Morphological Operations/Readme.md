@@ -63,6 +63,14 @@ The exact opposite to an opening would be a closing. A closing is a **dilation f
 A closing is used to close holes inside of objects or for connecting components together.
 
 
+## Morphological Gradient
+A morphological gradient is the difference between the dilation and erosion.It is useful for determining the outline of a particular object of an image.
+
+## Top Hat / White Hat
+A top hat (also known as white hat ) morphological operation is the difference between the **original input(greyscale/single channel) image** and the **opening**.
+A top hat operation is used to reveal **bright regions** of an image on **dark backgrounds**.
+
+
 
 
 
