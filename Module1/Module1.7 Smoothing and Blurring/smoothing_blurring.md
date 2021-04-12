@@ -36,6 +36,16 @@ Again, methods such as averaging and Gaussian compute means or weighted means fo
 
 Applying a median blur is accomplished by making a call to the cv2.medianBlur  function. This method takes two parameters: the image we want to blur and the size of our kernel.
 
+## Bilateral Filtering/Blurring
 
+In order to reduce noise while still maintaining edges, we can use bilateral blurring. Bilateral blurring accomplishes this by introducing two Gaussian distributions.
 
-  
+The first Gaussian function only considers spatial neighbors. That is, pixels that appear close together in the (x, y)-coordinate space of the image. The second Gaussian then models the pixel intensity of the neighborhood, ensuring that only pixels with similar intensity are included in the actual computation of the blur.
+
+ This method is able to preserve edges of an image, while still reducing noise. The largest downside to this method is that it is considerably slower than its averaging, Gaussian, and median blurring counterparts.We can apply bilateral filtering by making a call to the cv2.bilateralFilter() function and it takes.
+ 
+ The first parameter we supply is the image we want to blur. Then, we need to define the diameter of our pixel neighborhood — the larger this diameter is, the more pixels will be included in the blurring computation. Think of this parameter as a square kernel size.
+
+The third argument is our color standard deviation, denoted as sigma color. A larger value for sigma color means that more colors in the neighborhood will be considered when computing the blur. If we let sigma color get too large in respect to the diameter, then we essentially have broken the assumption  of bilateral filtering — that only pixels of similar color should contribute significantly to the blur.
+
+Finally, we need to supply the space standard deviation, which we call sigma space. A larger value of sigma space means that pixels farther out from the central pixel diameter will influence the blurring calculation.
