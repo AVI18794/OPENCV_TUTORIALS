@@ -46,9 +46,23 @@ Dilations increase the size of foreground object and are especially useful for j
 
 Dilations, just as an erosion, also utilize structuring elements — a center pixel p of the structuring element is set to white if ANY pixel in the structuring element is > 0.
 
-We apply dilations using the cv2.dilate  function:
+We apply dilations using the cv2.dilate  function.
+
+Unlike an erosion where the foreground region is slowly eaten away at, a dilation actually grows our foreground region.
+
+**Dilations are especially useful when joining broken parts of an object** 
+
 
 ## Opening
-An opening is an erosion followed by a dilation.
+An opening is an **erosion followed by a dilation.**
 
 Performing an opening operation allows us to remove small blobs from an image: first an erosion is applied to remove the small blobs, then a dilation is applied to regrow the size of the original object.
+
+## Closing
+The exact opposite to an opening would be a closing. A closing is a **dilation followed by an erosion**.
+A closing is used to close holes inside of objects or for connecting components together.
+
+
+
+
+
