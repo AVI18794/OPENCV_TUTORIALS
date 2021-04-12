@@ -70,6 +70,11 @@ A morphological gradient is the difference between the dilation and erosion.It i
 A top hat (also known as white hat ) morphological operation is the difference between the **original input(greyscale/single channel) image** and the **opening**.
 A top hat operation is used to reveal **bright regions** of an image on **dark backgrounds**.
 
+## Black Hat/ 
+
+The black hat operation is the **difference between the closing of the input image** and the **input image itself.** In fact, the black hat operator is simply the opposite of the white hat operator!
+
+We apply the black hat operator to **reveal dark regions against light backgrounds**.
 
 
 
